@@ -18,6 +18,7 @@ printf("%d^%d mod %d = \n",M,e,n);
 	}
 //long true_result = pow(M,e);
 //true_result %= n;
+// hei
 
 printf("my rsa: %ld \n",result);
 return 0;
