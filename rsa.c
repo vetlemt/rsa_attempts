@@ -6,8 +6,9 @@ int e = 3;
 long exponent = 1;
 long result = 1;
 
-int main(){
-printf("%d^%d mod %d = \n",M,e,n);
+void main(){
+	int Me = M;
+	printf("%d^%d mod %d = \n",M,e,n);
 	M %= n;
 	for (int i = 0; i < 32; i++){
 		if (e >> i & 1 == 1 ){
@@ -16,7 +17,7 @@ printf("%d^%d mod %d = \n",M,e,n);
 		}
 	M *= M % n;	
 	}
- long true_result = pow(M,e);
+ long true_result = pow(Me,e);
  true_result %= n;
 // hei hei hei
 
