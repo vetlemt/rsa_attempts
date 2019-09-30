@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
-int M = 11;
-int n = 17;
+int M = 7;
+int n = 15;
 int e = 13;
 long exponent = 1;
 long result = 1;
