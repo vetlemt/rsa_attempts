@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <math.h>
-int M = 10;
-int n = 17;
-int e = 5;
+int M = 5;
+int n = 7;
+int e = 2;
 long exponent = 1;
 long result = 1;
 
@@ -18,7 +18,7 @@ printf("%d^%d mod %d = \n",M,e,n);
 	}
 // long true_result = pow(M,e);
 // true_result %= n;
-// hei hei
+// hei hei hei
 
 printf("my rsa: %ld \n",result);
 return 0;
