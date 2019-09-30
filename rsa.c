@@ -12,7 +12,7 @@ void main(){
 	M %= n;
 	for (int i = 0; i < 32; i++){
 		if (e >> i & 1 == 1 ){
-			result *= M % n;
+			result = (result*M) % n;
 			printf("%ld\n",result);
 		}
 	M *= M % n;	
