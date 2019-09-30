@@ -2,7 +2,7 @@
 #include <math.h>
 int M = 5;
 int n = 7;
-int e = 2;
+int e = 3;
 long exponent = 1;
 long result = 1;
 
@@ -16,11 +16,11 @@ printf("%d^%d mod %d = \n",M,e,n);
 		}
 	M *= M % n;	
 	}
-// long true_result = pow(M,e);
-// true_result %= n;
+ long true_result = pow(M,e);
+ true_result %= n;
 // hei hei hei
 
-printf("my rsa: %ld \n",result);
+printf("my rsa: %ld \ntrue result: %ld\n",result,true_result);
 return 0;
 }
 
