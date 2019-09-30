@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <math.h>
-int M = 5;
-int n = 7;
-int e = 3;
+int M = 11;
+int n = 17;
+int e = 13;
 long exponent = 1;
 long result = 1;
 
