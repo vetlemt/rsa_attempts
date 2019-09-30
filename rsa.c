@@ -22,6 +22,5 @@ void main(){
 // hei hei hei
 
 printf("my rsa: %ld \ntrue result: %ld\n",result,true_result);
-return 0;
 }
 
