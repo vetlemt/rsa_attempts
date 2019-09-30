@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdbool.h>
+
 int M = 7;
 int n = 15;
 int e = 13;
@@ -19,6 +21,7 @@ void main(){
  long true_result = pow(Me,e);
  true_result %= n;
 
-printf("my result: %ld \ntrue result: %ld\n",result,true_result);
+printf("my result: %ld \ntrue result: %ld\n The algorithm is ",result,true_result);
+result == true_result ? printf("correct\n") : printf("incorrect\n");
 }
 
