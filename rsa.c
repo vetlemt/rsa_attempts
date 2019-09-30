@@ -13,14 +13,12 @@ void main(){
 	for (int i = 0; i < 32; i++){
 		if (e >> i & 1 == 1 ){
 			result = (result*M) % n;
-			printf("%ld\n",result);
 		}
 	M *= M % n;	
 	}
  long true_result = pow(Me,e);
  true_result %= n;
-// hei hei hei
 
-printf("my rsa: %ld \ntrue result: %ld\n",result,true_result);
+printf("my result: %ld \ntrue result: %ld\n",result,true_result);
 }
 
