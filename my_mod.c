@@ -2,7 +2,7 @@
 #include <stdbool.h>
 
 long my_mod(long B, long n){
-    long carry;
+    long carry = B;
     long carry_nxt = carry;
     long k = B >> (n-1);
     bool finished = false;
