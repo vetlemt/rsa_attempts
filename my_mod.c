@@ -1,15 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-long B = 10;
-long n = 3;
-
-void main(){
-    long ans = my_mod(B,n);
-    printf("my: %ld mod %ld = %ld\n", B, n, ans);
-    printf("C: %ld mod %ld = %ld\n", B, n, B%n);
-}
-
 long my_mod(long B, long n){
     long carry;
     long carry_nxt = carry;
@@ -30,3 +21,13 @@ long my_mod(long B, long n){
     }
 return carry;
 }
+
+
+void main(){
+    long B = 10;
+    long n = 3;
+    long ans = my_mod(B,n);
+    printf("my: %ld mod %ld = %ld\n", B, n, ans);
+    printf("C: %ld mod %ld = %ld\n", B, n, B%n);
+}
+
