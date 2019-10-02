@@ -2,6 +2,7 @@
 #include <stdbool.h>
 
 long my_mod(long B, long n){
+    if (n == 0){return B;} 
     long carry = B;
     long carry_nxt = carry;
     long k = B >> (n-1);
@@ -24,8 +25,8 @@ return carry;
 
 
 void main(){
-    long B = 17;
-    long n = 3;
+    long B = 177;
+    long n = 52;
     long ans = my_mod(B,n);
     printf("my: %ld mod %ld = %ld\n", B, n, ans);
     printf("C: %ld mod %ld = %ld\n", B, n, B%n);
