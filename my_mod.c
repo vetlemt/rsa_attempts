@@ -16,8 +16,8 @@ long my_mod(long B, long n){
             carry_nxt < n ? finished = true : 0;
             carry = carry_nxt;
         }
+        printf("C(i) = %ld, C(i+1) = %ld, k = %ld \n", carry_nxt, carry, k);
         k = k>>1;
-        printf("C(i) = %ld, C(i+1) = %ld\n", carry_nxt, carry);
     }
 return carry;
 }
