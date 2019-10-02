@@ -5,7 +5,13 @@ long my_mod(long B, long n){
     if (n == 0){return B;} 
     long carry = B;
     long carry_nxt = carry;
-    long k = B >> (n-1);
+    long k = 0;
+    int i = 0;
+    long nn = n;
+    while(nn>0){
+        k = k + (B>>i*(nn & 1));
+        nn = nn>>i;
+    }
     bool finished = false;
     while (!finished){ 
         k < 1 ? k = 1 : 0;
