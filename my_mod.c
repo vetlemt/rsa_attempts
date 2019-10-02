@@ -24,7 +24,7 @@ return carry;
 
 
 void main(){
-    long B = 10;
+    long B = 17;
     long n = 3;
     long ans = my_mod(B,n);
     printf("my: %ld mod %ld = %ld\n", B, n, ans);
