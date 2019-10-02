@@ -12,12 +12,12 @@ long my_mod(long B, long n){
         carry_nxt = carry - n*k;
         if (carry_nxt < 0){
             carry = carry;
-            k = k<<1;
+            k = k>>1;
         }
         else{
             carry_nxt < n ? finished = true : 0;
             carry = carry_nxt;
-            k = k>>1;
+            k = k<<1;
         }
         printf("C(i) = %ld, C(i+1) = %ld, k = %ld \n", carry_nxt, carry, k);
     }
