@@ -10,7 +10,7 @@ long my_mod(long B, long n){
     long nn = n;
     while(nn>0){
         k = k + (B>>(nn & 1));
-        nn = nn>>i;
+        nn = nn>>1;
     }
     bool finished = false;
     while (!finished){ 
