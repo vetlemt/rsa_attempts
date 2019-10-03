@@ -9,8 +9,10 @@ long my_mod(long B, long n){
     int i = 0;
     long nn = n;
     while(nn>0){
-        k = k + (B>>(nn & 1));
+        if (nn & 1 == 1)
+            k = k + (B>>i);
         nn = nn>>1;
+        i++;
     }
     bool finished = false;
     while (!finished){ 
