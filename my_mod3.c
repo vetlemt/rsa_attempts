@@ -8,7 +8,7 @@ long my_mod(long B, long n){
     long k = 1;
     bool finished = false;
     while (!finished){ 
-        k < 1 ? k = 1 : 0;
+        k < 0 ? k = 0 : 0;
         carry_nxt = carry - (n << k);
         if (carry_nxt < 0){
             carry = carry;
