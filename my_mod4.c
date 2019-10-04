@@ -11,7 +11,7 @@ long my_mod(long B, long n){
     while (!finished){ 
         k < 0 ? k = 0 : 0;
         error = n-carry_nxt;
-        k = error>>2;
+        k = msbSize(error);
         carry_nxt = carry - (n << k);
         if (carry_nxt < 0){
             carry = carry;
@@ -27,6 +27,17 @@ long my_mod(long B, long n){
 return carry;
 }
 
+int msbSize(long a){
+    int b = 1;
+    int i = 0;
+    int msb = 0;
+    while(b  ){
+        b & 1 == 1 ? msb = i : 0; 
+        b = b >> 1;
+        i++;
+    }
+    return msb;
+}
 
 
 void main(){
