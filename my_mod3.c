@@ -3,6 +3,7 @@
 
 long my_mod(long B, long n){
     if (n == 0){return B;} 
+    int i = 0;
     long carry = B;
     long carry_nxt = carry;
     long k = 1;
@@ -19,14 +20,15 @@ long my_mod(long B, long n){
             carry = carry_nxt;
             k++;
         }
-        printf("C(i) = %ld, C(i+1) = %ld, k = %ld \n", carry_nxt, carry, k);
+        i++;
+        printf("C(%d) = %ld, C(%d+1) = %ld, k = %ld \n",i,i, carry_nxt, carry, k);
     }
 return carry;
 }
 
 
 void main(){
-    long B = 177;
+    long B = 177e5;
     long n = 6;
     long ans = my_mod(B,n);
     printf("my: %ld mod %ld = %ld\n", B, n, ans);
