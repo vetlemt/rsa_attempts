@@ -31,7 +31,7 @@ int msbSize(long a){
     int b = 1;
     int i = 0;
     int msb = 0;
-    while(b  ){
+    while(b > 0){
         b & 1 == 1 ? msb = i : 0; 
         b = b >> 1;
         i++;
