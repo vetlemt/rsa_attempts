@@ -28,8 +28,8 @@ return carry;
 
 
 void main(){
-    long B = 177e5;
-    long n = 6;
+    long B = 177e6;
+    long n = 197;
     long ans = my_mod(B,n);
     printf("my: %ld mod %ld = %ld\n", B, n, ans);
     printf("C: %ld mod %ld = %ld\n", B, n, B%n);
