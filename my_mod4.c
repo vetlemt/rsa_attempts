@@ -7,20 +7,22 @@ long my_mod(long B, long n){
     long carry_nxt = carry;
     long error;
     long k = 1;
+    long nk = 0;
     bool finished = false;
     while (!finished){ 
         k < 0 ? k = 0 : 0;
+        carry_nxt = carry - nk;//(n << k);
         error = n-carry_nxt;
-        k = msbSize(error);
-        carry_nxt = carry - (n << k);
         if (carry_nxt < 0){
             carry = carry;
             k--;
+            nk = n >> msb(error);
         }
         else{
             carry_nxt < n ? finished = true : 0;
             carry = carry_nxt;
             k++;
+            nk = n << msb(error);
         }
         printf("C(i) = %ld, C(i+1) = %ld, k = %ld \n", carry_nxt, carry, k);
     }
