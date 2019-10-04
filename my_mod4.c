@@ -28,7 +28,7 @@ return carry;
 }
 
 int msbSize(long a){
-    int b = 1;
+    int b = abs(a);
     int i = 0;
     int msb = 0;
     while(b > 0){
