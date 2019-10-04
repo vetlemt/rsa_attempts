@@ -21,7 +21,7 @@ long my_mod(long B, long n){
             k++;
         }
         i++;
-        printf("C(%d) = %ld, C(%d+1) = %ld, k = %ld \n",i,i, carry_nxt, carry, k);
+        printf("C(%d) = %ld, C(%d+1) = %ld, k = %ld \n",i, carry_nxt, i, carry, k);
     }
 return carry;
 }
