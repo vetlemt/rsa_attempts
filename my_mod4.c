@@ -5,32 +5,28 @@ long my_mod(long B, long n){
     if (n == 0){return B;} 
     long carry = B;
     long carry_nxt = carry;
-    long k = 0;
-    int i = 0;
-    long nn = n;
-    while(nn>0){
-        if (nn & 1 == 1)
-            k += (B>>i);
-        nn = nn>>1;
-        i++;
-    }
+    long error;
+    long k = 1;
     bool finished = false;
     while (!finished){ 
-        k < 1 ? k = 1 : 0;
-        carry_nxt = carry - n*k;
+        k < 0 ? k = 0 : 0;
+        error = n-carry_nxt;
+        k = error>>2;
+        carry_nxt = carry - (n << k);
         if (carry_nxt < 0){
             carry = carry;
-            k = k >> 1;
+            k--;
         }
         else{
             carry_nxt < n ? finished = true : 0;
             carry = carry_nxt;
-            k = k << 1;
+            k++;
         }
         printf("C(i) = %ld, C(i+1) = %ld, k = %ld \n", carry_nxt, carry, k);
     }
 return carry;
 }
+
 
 
 void main(){
