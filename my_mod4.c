@@ -16,13 +16,13 @@ long my_mod(long B, long n){
         if (carry_nxt < 0){
             carry = carry;
             k--;
-            nk = n >> msb(error);
+            nk = n >> msbSize(error);
         }
         else{
             carry_nxt < n ? finished = true : 0;
             carry = carry_nxt;
             k++;
-            nk = n << msb(error);
+            nk = n << msbSize(error);
         }
         printf("C(i) = %ld, C(i+1) = %ld, k = %ld \n", carry_nxt, carry, k);
     }
