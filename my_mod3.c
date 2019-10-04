@@ -28,7 +28,7 @@ return carry;
 
 
 void main(){
-    __int128_t B = -1 ^ (1<<127);
+    __int128_t B = -1 ^ (1<<128);
     __int128_t n = 3;
     __int128_t ans = my_mod(B,n);
     printf("my: %g mod %g = %g\n", (double)B, (double)n, (double)ans);
