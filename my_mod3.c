@@ -21,7 +21,7 @@ long my_mod(__uint128_t B, __uint128_t n){
             k++;
         }
         i++;
-        printf("C(%d) = %g, \t\t C(%d+1) = %g, \t k = %g \n",i, (double)carry_nxt, i, (double)carry, k);
+        printf("C(%d) = %g, \t\t C(%d+1) = %g, \t k = %g \n",i, (double)carry_nxt, i, (double)carry, (double)k);
     }
 return carry;
 }
@@ -32,6 +32,6 @@ void main(){
     __uint128_t n = 3;
     __uint128_t ans = my_mod(B,n);
     printf("my: %g mod %g = %g\n", (double)B, (double)n, (double)ans);
-    printf("C: %g mod %g = %g\n", (double)B, (double)n, (double)(B%n));
+    printf(" C: %g mod %g = %g\n", (double)B, (double)n, (double)(B%n));
 }
 
