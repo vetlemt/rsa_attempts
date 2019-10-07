@@ -1,5 +1,19 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
+
+int msbSize(long a){
+    int b = abs(a);
+    int i = 0;
+    int msb = 0;
+    while(b > 0){
+        b & 1 == 1 ? msb = i : 0; 
+        b = b >> 1;
+        i++;
+    }
+    return msb;
+}
+
 
 long my_mod(long B, long n){
     if (n == 0){return B;} 
@@ -27,18 +41,6 @@ long my_mod(long B, long n){
         printf("C(i) = %ld, C(i+1) = %ld, k = %ld \n", carry_nxt, carry, k);
     }
 return carry;
-}
-
-int msbSize(long a){
-    int b = abs(a);
-    int i = 0;
-    int msb = 0;
-    while(b > 0){
-        b & 1 == 1 ? msb = i : 0; 
-        b = b >> 1;
-        i++;
-    }
-    return msb;
 }
 
 
