@@ -8,7 +8,7 @@ int msbSize(__uint128_t a){
 }
 
 long my_mod(__uint128_t carry, __uint128_t n){
-    if (n == 0){return B;} 
+    if (n == 0){return carry;} 
     int k = 0;
     int i = 0;
     int kc = msbSize(n) + 1;
