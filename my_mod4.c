@@ -7,7 +7,7 @@ long my_mod(long B, long n){
     long carry_nxt = carry;
     long error;
     long k = 1;
-    long nk = 0;
+    long nk = n*k;
     bool finished = false;
     while (!finished){ 
         k < 0 ? k = 0 : 0;
@@ -16,13 +16,13 @@ long my_mod(long B, long n){
         if (carry_nxt < 0){
             carry = carry;
             k--;
-            nk = n >> msbSize(error);
+            nk = nk >> msbSize(error);
         }
         else{
             carry_nxt < n ? finished = true : 0;
             carry = carry_nxt;
             k++;
-            nk = n << msbSize(error);
+            nk = nk << msbSize(error);
         }
         printf("C(i) = %ld, C(i+1) = %ld, k = %ld \n", carry_nxt, carry, k);
     }
