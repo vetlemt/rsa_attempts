@@ -21,23 +21,20 @@ long my_mod(long B, long n){
     long carry = B;
     long carry_nxt = carry;
     long error;
-    long k = 1;
-    long nk = n*k;
+    long k = 0;
     bool finished = false;
     while (!finished){ 
         k < 0 ? k = 0 : 0;
-        carry_nxt = carry - nk;//(n << k);
+        carry_nxt = carry - n<<k;//(n << k);
         error = n-carry_nxt;
         if (carry_nxt < 0){
             carry = carry;
-            k--;
-            nk = nk >> msbSize(error);
+            k -= msbSize(carry_nxt) - msbSize(n);
         }
         else{
             carry_nxt < n ? finished = true : 0;
             carry = carry_nxt;
-            k++;
-            nk = nk << msbSize(error);
+            k += msbSize(carry_nxt) - msbSize(n);
         }
         printf("C(i) = %ld, C(i+1) = %ld, k = %ld \n", carry_nxt, carry, k);
     }
