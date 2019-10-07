@@ -41,8 +41,8 @@ return carry;
 
 
 void main(){
-    long B = 177;
-    long n = 6;
+    long B = 2e7+1;
+    long n = 3;
     printf("msbSize(9) = %d\n",msbSize(9));
     long ans = my_mod(B,n);
     printf("my: %ld mod %ld = %ld\n", B, n, ans);
