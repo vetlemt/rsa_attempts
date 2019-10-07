@@ -20,13 +20,11 @@ long my_mod(long B, long n){
     if (n == 0){return B;} 
     long carry = B;
     long carry_nxt = carry;
-    long error;
     long k = 0;
     bool finished = false;
     while (!finished){ 
         k < 0 ? k = 0 : 0;
-        carry_nxt = carry - n<<k;//(n << k);
-        error = n-carry_nxt;
+        carry_nxt = carry - ( n << k );//(n << k);
         if (carry_nxt < 0){
             carry = carry;
             k -= msbSize(carry_nxt) - msbSize(n);
@@ -45,6 +43,7 @@ return carry;
 void main(){
     long B = 177;
     long n = 6;
+    printf("msbSize(9) = %d",msbSize(9))
     long ans = my_mod(B,n);
     printf("my: %ld mod %ld = %ld\n", B, n, ans);
     printf("C: %ld mod %ld = %ld\n", B, n, B%n);
