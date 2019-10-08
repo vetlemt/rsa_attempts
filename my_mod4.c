@@ -27,9 +27,9 @@ return carry;
 
 
 void main(){
-    __uint128_t B = 3e38;
+    __uint128_t B = 3;
     B+= 7;
-    __uint128_t n = 3;
+    __uint128_t n = 3e38;
     printf("msbSize(B) = %d\n",msbSize(B));
     __uint128_t ans = my_mod(B,n);
     printf("my: %g mod %g = %g\n", (float)B, (float)n, (float)ans);
