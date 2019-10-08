@@ -27,7 +27,7 @@ return carry;
 
 
 void main(){
-    __uint128_t B = 0;
+    __uint128_t B = 3e35;
     B+= 7;
     __uint128_t n = 3;//3e38;
     printf("msbSize(B) = %d\n",msbSize(B));
