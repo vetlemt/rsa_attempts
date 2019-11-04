@@ -17,7 +17,7 @@ void main(){
 	__uint128_t exponent = 1;
 	__uint128_t result = 1;
 	__uint128_t Me = M;
-	//printf("%d^%d mod %d = \n",M,e,n);
+	printf("%0.1g^%0.1g mod %0.1g =",(float)M,(float)e,(float)n);
 	M %= n;
 	while ( e > 0 ){
 		if (e & 1 == 1 ){
@@ -26,7 +26,7 @@ void main(){
 		M = modProd(M,M,n);	
 		e = e >> 1;
 	}
-	printf("Result: %f\n",(float)result);
+	printf(" %0.1g\n",(float)result);
  //long true_result = pow(Me,e);
  //true_result %= n;
 
