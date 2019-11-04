@@ -15,7 +15,6 @@ int main(){
 	__uint128_t e = 15514;
 	__uint128_t exponent = 1;
 	__uint128_t result = 1;
-	__uint128_t Me = M;
 	printf("%0.6g^%0.6g mod %0.6g =",(float)M,(float)e,(float)n);
 	M %= n;
 	while ( e > 0 ){
