@@ -10,14 +10,14 @@ __uint128_t modProd( __uint128_t  A,__uint128_t B,__uint128_t n){
 return P;
 }
 
-void main(){
-	__uint128_t M = 23452;
-	__uint128_t n = 1234;
-	__uint128_t e = 1551;
+int main(){
+	__uint128_t M = 234521;
+	__uint128_t n = 12342;
+	__uint128_t e = 15514;
 	__uint128_t exponent = 1;
 	__uint128_t result = 1;
 	__uint128_t Me = M;
-	printf("%0.5g^%0.5g mod %0.5g =",(float)M,(float)e,(float)n);
+	printf("%0.6g^%0.6g mod %0.6g =",(float)M,(float)e,(float)n);
 	M %= n;
 	while ( e > 0 ){
 		if (e & 1 == 1 ){
@@ -26,11 +26,6 @@ void main(){
 		M = modProd(M,M,n);	
 		e = e >> 1;
 	}
-	printf(" %0.5g\n",(float)result);
- //long true_result = pow(Me,e);
- //true_result %= n;
-
-//printf("my result: %ld \ntrue result: %ld\n The algorithm is ",result,true_result);
-//result == true_result ? printf("correct\n") : printf("incorrect\n");
+	printf(" %0.6g\n",(float)result);
 }
 
