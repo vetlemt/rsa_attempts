@@ -11,9 +11,9 @@ return P;
 }
 
 void main(){
-	__uint128_t M = 7;
-	__uint128_t n = 15;
-	__uint128_t e = 13;
+	__uint128_t M = 23452;
+	__uint128_t n = 1234;
+	__uint128_t e = 1551;
 	__uint128_t exponent = 1;
 	__uint128_t result = 1;
 	__uint128_t Me = M;
@@ -26,7 +26,7 @@ void main(){
 		M = modProd(M,M,n);	
 		e = e >> 1;
 	}
-	printf("Result: %f",(float)result);
+	printf("Result: %f\n",(float)result);
  //long true_result = pow(Me,e);
  //true_result %= n;
 
