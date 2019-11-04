@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 
 __uint128_t modProd( __uint128_t  A,__uint128_t B,__uint128_t n){
     __uint128_t P = 0;
